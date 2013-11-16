@@ -1,9 +1,9 @@
 $(function(){
 	
-alert('yes');	
-
 	$('#login-with-fb').click(function(){
-		window.location.href = "/connect/facebook";
+		window.location.href = "/SigawBayan/connect/facebook";
 	})
+	
+
 	
 });

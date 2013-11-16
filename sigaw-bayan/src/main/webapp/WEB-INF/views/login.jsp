@@ -53,15 +53,18 @@
 			<div class="row-fluid">
 				<div class="login-box">
 					<h2>Login to your account</h2>
-					<form class="form-horizontal" action="index.html" method="post" />
+					<form class="form-horizontal" action="<c:url value='j_spring_security_check'/>" method="post" />
 						<fieldset>
-							<input class="input-large span12" name="username" id="username" type="text" placeholder="type username" />
-							<input class="input-large span12" name="password" id="password" type="password" placeholder="type password" />
+							<input class="input-large span12" name="j_username" id="username" type="text" placeholder="type username" />
+							<input class="input-large span12" name="j_password" id="password" type="password" placeholder="type password" />
 							<div class="clearfix"></div>
-							<button type="submit" class="btn btn-primary span12">Sign In</button>
-							<button type="button" id="login-with-fb" class="btn btn-primary span12">Login with Facebook</button>
-						</fieldset>	
-
+							<button type="submit" class="btn btn-large btn-success span12">Sign In</button>
+							</fieldset>	
+					</form>
+						<button type="button" id="login-with-fb" class="btn btn-large btn-info span12">Login with Facebook</button>
+						
+					<form class="form-horizontal" action="<c:url value='j_spring_security_check'/>" method="post" />
+						<button type="submit" id="no-login" class="btn btn-large btn-danger span12">Proceed without Signing in...</button>
 					</form>
 				</div>
 			</div><!--/row-->

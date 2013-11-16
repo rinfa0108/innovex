@@ -2,10 +2,12 @@ package com.bayan.sigaw.govdata.api.dao;
 
 import java.util.List;
 
-import com.bayan.sigaw.govdata.model.ProjectDetails;
+import com.bayan.sigaw.govdata.model.ProjectDetail;
 
 public interface GovDataPhDAO {
 	
-	List<ProjectDetails> getAllProjects();
+	List<ProjectDetail> getAllProjects();
+	List<ProjectDetail> getAllProjects(String limit);
+	String callGenericGovDataApi(String requestUri);	
 	
 }
