@@ -126,18 +126,181 @@
 			<div id="content" class="span10">
 						
 				<div class="row-fluid">
-					<div id="wrapper">
-						<div id="map-canvas"/>
-					</div>
-					<div id="data-info-container">
-						<div class="data-info">
-							<p>Region: <span class="region" /></p>
-							<p>Description: <span class="prog-desc" /></p>
-							<p>Department: <span class="dept" /></p>
-							<p>Amount: <span class="amount" /></p>
-							<a class="saro-no">Post Sentiment</a>
+				
+						<div class="span3 smallstat box mobileHalf" ontablet="span6" ondesktop="span3">
+							<i class="icon-road blue"></i>
+							<span class="title">2011 Budget</span>
+							<span id="2011budget" class="value">0</span>
 						</div>
-					</div>
+						
+						<div class="span3 smallstat box mobileHalf" ontablet="span6" ondesktop="span3">
+							<i class="icon-barcode red"></i>
+							<span class="title">2012 Budget</span>
+							<span id="2012budget" class="value">0</span>
+						</div>
+						
+						<div class="span3 smallstat box mobileHalf noMargin" ontablet="span6" ondesktop="span3">
+							<i class="icon-download-alt green"></i>
+							<span class="title">2013 Budget</span>
+							<span id="2013budget" class="value">0</span>
+						</div>
+						
+						<div class="span3 smallstat mobileHalf box" ontablet="span6" ondesktop="span3">
+							<i class="icon-money yellow"></i>
+							<span class="title">New Appro Total</span>
+							<span id="newapprototal" class="value"></span>
+						</div>
+						
+				</div>	
+				
+				<div class="row-fluid">
+				
+					<div class="main-chart">
+						
+						<div class="bar" id="region1">
+							
+							<div class="title">Region I</div>
+							<div class="value">80%</div>
+						
+						</div>
+						
+						<div class="bar simple" id="region2">
+							
+							<div class="title">Region II</div>
+							<div class="value">60%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">MAR</div>
+							<div class="value">50%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">APR</div>
+							<div class="value">40%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">MAY</div>
+							<div class="value">10%</div>
+						
+						</div>	
+						
+						<div class="bar simple">
+							
+							<div class="title">JUN</div>
+							<div class="value">30%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">JUL</div>
+							<div class="value">50%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">AUG</div>
+							<div class="value">65%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">SEP</div>
+							<div class="value">40%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">OCT</div>
+							<div class="value">32%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">NOV</div>
+							<div class="value">20%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">DEC</div>
+							<div class="value">10%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">JAN</div>
+							<div class="value">100%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">FEB</div>
+							<div class="value">60%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">MAR</div>
+							<div class="value">50%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">APR</div>
+							<div class="value">40%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">MAY</div>
+							<div class="value">10%</div>
+						
+						</div>	
+						
+						<div class="bar simple">
+							
+							<div class="title">JUN</div>
+							<div class="value">30%</div>
+						
+						</div>
+						
+						<div class="bar">
+							
+							<div class="title">JUL</div>
+							<div class="value">50%</div>
+						
+						</div>
+						
+						<div class="bar simple">
+							
+							<div class="title">AUG</div>
+							<div class="value">65%</div>
+						
+						</div>	
+						
+						
+						
+					</div>	
+			
 				</div>	
 					
 			</div>

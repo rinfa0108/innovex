@@ -17,8 +17,10 @@ public class HomeController {
 	public String goToHomePage(ModelMap model) {
 		
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		
+		System.out.println("user: " + user.getAuthorities());		
 		String name = user.getUsername();
-	
+
 		model.addAttribute("username", name);
 		model.addAttribute("message", "Fight Corruption");
 		return "home";
@@ -41,6 +43,11 @@ public class HomeController {
 		return "login";
 	}
 	
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	public String logout(ModelMap model) {
+		return "logout";
+	}
+	
 	@RequestMapping(value="/loginfailed", method = RequestMethod.GET)
 	public String loginerror(ModelMap model) {
 		model.addAttribute("error", "true");
@@ -52,5 +59,11 @@ public class HomeController {
 	public String map(ModelMap model) {
 		return "map";
 	}
+	
+	@RequestMapping(value="/budgetgraph", method = RequestMethod.GET)
+	public String budgetgraph(ModelMap model) {
+		return "budgetgraph";
+	}
+	
 	
 }

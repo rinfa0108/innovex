@@ -3,3 +3,9 @@
 html, body {color:#000;}
 
 .login-box #username, .login-box #password {color:#383e4b !important;}
+
+#map-canvas { height: 450px; }
+#data-info-container {display:none;}
+.data-info {background-color:#ccc; max-height: 200px;}
+
+.smallstat .title {color : #000 !important;}

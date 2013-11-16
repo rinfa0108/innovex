@@ -74,9 +74,17 @@ public class GovDataController {
 	 * @return
 	 */
 	@RequestMapping(value="/opendata/{requestUri}", method = RequestMethod.GET)
-	public @ResponseBody String callGenericGovDataApi(@PathVariable String requestUri) {
-		System.out.println("requestUri: " + requestUri);
+	public @ResponseBody String callGenericGovDataApi(@PathVariable String requestUri) {		
 		return govDataPhDAO.callGenericGovDataApi(requestUri); 
+	}
+	
+	/**
+	 * Returns the Response from Generic Call to Gov Data API
+	 * @return
+	 */
+	@RequestMapping(value="/opendata/getFewProjectsPerRegion", method = RequestMethod.GET)
+	public @ResponseBody ArrayList<ProjectDetail> getFewProjectsPerRegion() {		
+		return (ArrayList<ProjectDetail>) govDataPhDAO.getFewProjectsPerRegion(); 
 	}
 	
 }

@@ -14,7 +14,7 @@ public class SimpleSignInAdapter implements SignInAdapter{
 	            new UsernamePasswordAuthenticationToken(localUserId, null, null));
 		
 		System.out.println("localUserId:" + localUserId);
-		
+		// TODO Add this user to the database
 	    return "home";
 	}
 

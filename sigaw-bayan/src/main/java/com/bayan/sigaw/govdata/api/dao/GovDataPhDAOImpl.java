@@ -160,6 +160,70 @@ public class GovDataPhDAOImpl implements GovDataPhDAO{
 		System.out.println("projectDetails.getProjectDetails(): " + projectDetails.getData());
 		return projectDetails.getData();
 	}
+
+
+	@Override
+	public List<ProjectDetail> getFewProjectsPerRegion() {
+		ArrayList<String> regions = new ArrayList<String>();
+					
+		regions.add("1");
+		regions.add("2");
+		regions.add("3");
+		regions.add("4");
+		regions.add("5");
+		regions.add("6");
+		regions.add("7");
+		regions.add("8");
+		regions.add("9");
+		regions.add("10");
+		regions.add("11");
+		regions.add("12");
+		regions.add("NCR");
+		regions.add("CAR");
+		
+		DefaultHttpClient client = new DefaultHttpClient();
+		ProjectDetails projectDetails = null;
+		List<ProjectDetail> returnProjectDetails = new ArrayList<ProjectDetail>();
+		
+		try 
+		{
+			for (String region: regions) {
+				HttpGet getRequest = new HttpGet(OPENDATA_URL + "?app_id=" + APP_ID 
+						+ "&limit=" + 5 + "&region=" + region);
+
+				//getRequest.addHeader("accept", "application/json");				
+
+				HttpResponse response = client.execute(getRequest);		
+
+				if (response.getStatusLine().getStatusCode() != 200) {
+					throw new RuntimeException("Failed : HTTP error code : "
+							+ response.getStatusLine().getStatusCode());
+				}
+
+				BufferedReader br = new BufferedReader(
+						new InputStreamReader((response.getEntity().getContent())));
+
+				StringBuffer responseBuffer = new StringBuffer(); 
+				String output = null;
+				while ((output = br.readLine()) != null) {
+					responseBuffer.append(output);
+				}
+
+				if(!StringUtils.isEmpty(responseBuffer.toString())) {
+					Gson gson = new GsonBuilder().create();
+					projectDetails = gson.fromJson(responseBuffer.toString(), ProjectDetails.class);
+					returnProjectDetails.addAll(projectDetails.getData());
+				} else {
+					throw new RuntimeException("No data retrieve!!!!");
+				}
+			}
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return returnProjectDetails;
+	}
 	
 	
 	

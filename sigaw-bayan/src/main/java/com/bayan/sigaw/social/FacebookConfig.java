@@ -31,9 +31,6 @@ public class FacebookConfig {
 		ProviderSignInController controller = 
 				new ProviderSignInController(connectionFactoryLocator(), 
 	        usersConnectionRepository(), new SimpleSignInAdapter());
-		
-		
-		
 		return controller;
 	}
 	

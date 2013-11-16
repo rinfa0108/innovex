@@ -23,5 +23,7 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<bean id="accountsService" class="com.bayan.sigaw.users.service.AccountsServiceImpl"/>
 
 </beans>
