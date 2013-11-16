@@ -1,0 +1,5 @@
+
+/*Common CSS */
+html, body {color:#000;}
+
+.login-box #username, .login-box #password {color:#383e4b !important;}

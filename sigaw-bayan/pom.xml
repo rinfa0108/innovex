@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>data-gov-ph</groupId>
+  <artifactId>sigaw-bayan</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>sigaw-bayan Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+		<spring.version>3.1.0.RELEASE</spring.version>
+		<org.springframework.social-facebook-version>1.0.3.RELEASE</org.springframework.social-facebook-version>
+		<org.springframework.social-version>1.0.3.RELEASE</org.springframework.social-version>
+		<jackson.version>1.9.10</jackson.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+	<!-- Spring 3 dependencies -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	
+	<!-- Spring Social -->
+	<dependency>
+		<groupId>org.springframework.social</groupId>
+		<artifactId>spring-social-core</artifactId>
+		<version>${org.springframework.social-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.social</groupId>
+		<artifactId>spring-social-facebook</artifactId>
+		<version>${org.springframework.social-facebook-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.social</groupId>
+		<artifactId>spring-social-web</artifactId>
+		<version>${org.springframework.social-version}</version>
+	</dependency>
+	       
+	<!-- Spring Security -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-crypto</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<!-- MySQL database driver -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.9</version>
+	</dependency>
+
+	<!-- CGLIB, only required and used for @Configuration usage: could be removed 
+		in future release of Spring -->
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib-nodep</artifactId>
+		<version>2.2</version>
+	</dependency>
+	
+	<!-- Log4j -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.9</version>
+	</dependency>
+	
+	
+	<!-- Jackson JSON Mapper -->
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	
+	<!-- Apache Httpclient -->
+	<dependency>
+		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpclient</artifactId>
+		<version>4.1.1</version>
+	</dependency>
+		       
+  </dependencies>
+  <build>
+    <finalName>SigawBayan</finalName>
+    <plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.1.1.Final</version>
+            </plugin>
+		</plugins>
+  </build>
+</project>
