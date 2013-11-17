@@ -65,6 +65,7 @@ function bindDataInfo(marker, infoWindow, data){
 		dataInfo.find('.prog-desc').text(data.program_description);
 		dataInfo.find('.dept').text(data.department_code);
 		dataInfo.find('.amount').text(data.amount);
+		dataInfo.find('#saronumber').text(data.saro_no);
 		dataInfo.find('.saro-no').attr('href', 'projectdetails/' + data.saro_no + '/' + data.region);
         infoWindow.setContent(dataInfo.html());
         infoWindow.open(map, marker);

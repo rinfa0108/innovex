@@ -15,6 +15,7 @@ public class SentimentsResultSetExtractor implements ResultSetExtractor{
 			DataAccessException {
 		Sentiment sentiment = new Sentiment();
 		sentiment.setDateCreated(rs.getTimestamp("dateCreated"));
+		sentiment.setSentiment(rs.getString("sentiment"));
 		sentiment.setRating(rs.getFloat("rating"));
 		sentiment.setSaroNo(rs.getString("saroNo"));
 		sentiment.setType(rs.getString("type"));
