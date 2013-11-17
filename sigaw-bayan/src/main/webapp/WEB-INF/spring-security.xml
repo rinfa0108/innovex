@@ -6,10 +6,12 @@
 	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
 	<http auto-config="true">
+		
 		<intercept-url pattern="/home*" access="ROLE_USER" />
-		<form-login login-page="/login" default-target-url="/welcome"
+		
+		<form-login login-page="/login" default-target-url="/home"
 			authentication-failure-url="/loginfailed" />
-		<logout logout-success-url="/logout" />
+		<logout logout-success-url="/logout" />		
 	</http>
 
 	<authentication-manager>

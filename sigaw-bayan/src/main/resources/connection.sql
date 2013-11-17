@@ -16,6 +16,7 @@ create unique index UserConnectionRank on UserConnection(userId, providerId, ran
 create table opendata.users (
     username varchar(255) not null,
     password varchar(255),
+    email varchar(255),
     enabled varchar(255)
 );
  
@@ -23,3 +24,24 @@ create table opendata.authorities (
     username varchar(255) ,
     authority varchar(255)
 );
+
+create table opendata.projects (
+    saroNo varchar(255) not null,
+    description varchar(255),
+    amount bigint,
+    region varchar(255),
+    purpose text,
+    issueDate date,
+    primary key (saroNo)
+);
+
+
+create table opendata.sentiments (
+    saroNo varchar(255) not null,    
+    sentiment text,
+    dateCreated timestamp,
+    type varchar(255),
+    rating float
+);
+
+
