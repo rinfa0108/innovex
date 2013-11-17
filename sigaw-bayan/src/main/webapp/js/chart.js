@@ -37,12 +37,45 @@ function loadSAROTotalAmountPerRegion(region) {
 
 $(function(){
 	
+	loadBudgetChart();
 	
 	$('#login-with-fb').click(function(){
 		window.location.href = "/SigawBayan/connect/facebook";
 	})
 	
 	
+	
+	var yrbudget = 2005900000;
+	var totalappro = 1368229156;
+	var totalbudget = yrbudget + totalappro;	
+	
+	var ytdArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,"NCR","CAR"];
+	$.each( ytdArray, function( index, region ){	
+		
+		
+		var url = "/SigawBayan/opendata/saro%3Fapp_id=527a5d935e13db265fc2598d&year=2013&limit=2000&region=";
+		
+		$.getJSON(url + region, function (d) {
+			
+			var total_amount = 0;			
+			
+
+			console.log(totalbudget);
+			
+			$.each(d.data,function(index, value){
+				//console.log(value.amount);	
+				total_amount = total_amount + parseInt(value.amount);
+				//console.log(index +":"+region+ " : " + total_amount +" = "+ total_amount + " + " + value.amount);
+			});
+			
+			var percent = (total_amount / totalbudget) * 100;
+			$("#region"+region+ " .value").html(percent+"%");
+			$("#region"+region+" .value").css("height",percent+"%");
+		});
+		
+		
+		
+	});
 	
 
 	$('#submit-comment').click(function(event){

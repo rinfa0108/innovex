@@ -142,160 +142,140 @@
 						<div class="span3 smallstat box mobileHalf noMargin" ontablet="span6" ondesktop="span3">
 							<i class="icon-download-alt green"></i>
 							<span class="title">2013 Budget</span>
-							<span id="2013budget" class="value">0</span>
+							<span id="2013budget" class="value" data-amount="">0</span>
 						</div>
 						
 						<div class="span3 smallstat mobileHalf box" ontablet="span6" ondesktop="span3">
 							<i class="icon-money yellow"></i>
 							<span class="title">New Appro Total</span>
-							<span id="newapprototal" class="value"></span>
+							<span id="newapprototal" class="value" data-amount=""></span>
 						</div>
 						
 				</div>	
 				
+				<div class="row-fluid">
+					<div id="loadchart">Please wait while data is being loaded <blink>...</blink></div>
+				</div>
+				
+				<div class="clearfix"></div>
+		
 				<div class="row-fluid">
 				
 					<div class="main-chart">
 						
 						<div class="bar" id="region1">
 							
-							<div class="title">Region I</div>
-							<div class="value">80%</div>
+							<div class="title">R I</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple" id="region2">
+						<div class="bar " id="region2">
 							
-							<div class="title">Region II</div>
-							<div class="value">60%</div>
+							<div class="title">R II</div>
+							<div class="value">Loading</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar " id="region3">
 							
-							<div class="title">MAR</div>
-							<div class="value">50%</div>
+							<div class="title">R III</div>
+							<div class="value">Loading</div>
 						
 						</div>
 						
-						<div class="bar">
+						<div class="bar" id="region4">
 							
-							<div class="title">APR</div>
-							<div class="value">40%</div>
+							<div class="title">R IV</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar " id="region5">
 							
-							<div class="title">MAY</div>
-							<div class="value">10%</div>
+							<div class="title">R V</div>
+							<div class="value">0%</div>
 						
 						</div>	
 						
-						<div class="bar simple">
+						<div class="bar" id="region6">
 							
-							<div class="title">JUN</div>
-							<div class="value">30%</div>
+							<div class="title">R VI</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar">
+						<div class="bar" id="region7">
 							
-							<div class="title">JUL</div>
-							<div class="value">50%</div>
+							<div class="title">R VII</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="region8">
 							
-							<div class="title">AUG</div>
-							<div class="value">65%</div>
+							<div class="title">R VIII</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="region9">
 							
-							<div class="title">SEP</div>
-							<div class="value">40%</div>
+							<div class="title">R VIX</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar">
+						<div class="bar" id="region10">
 							
-							<div class="title">OCT</div>
-							<div class="value">32%</div>
+							<div class="title">R X</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="region11">
 							
-							<div class="title">NOV</div>
-							<div class="value">20%</div>
+							<div class="title">R XI</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="region12">
 							
-							<div class="title">DEC</div>
-							<div class="value">10%</div>
+							<div class="title">R XII</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar">
+						<div class="bar" id="region13">
 							
-							<div class="title">JAN</div>
-							<div class="value">100%</div>
+							<div class="title">R XIII</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="regionNCR">
 							
-							<div class="title">FEB</div>
-							<div class="value">60%</div>
+							<div class="title">NCR</div>
+							<div class="value">Loading</div>
 						
 						</div>
 						
-						<div class="bar simple">
+						<div class="bar" id="regionCAR">
 							
-							<div class="title">MAR</div>
-							<div class="value">50%</div>
+							<div class="title">CAR</div>
+							<div class="value">Loading</div>
 						
 						</div>
 						
-						<div class="bar">
+						<div class="bar" id="regionCALABARZON">
 							
-							<div class="title">APR</div>
-							<div class="value">40%</div>
+							<div class="title"> CLBZ IV-A</div>
+							<div class="value">0%</div>
 						
 						</div>
 						
-						<div class="bar simple">
-							
-							<div class="title">MAY</div>
-							<div class="value">10%</div>
 						
-						</div>	
-						
-						<div class="bar simple">
-							
-							<div class="title">JUN</div>
-							<div class="value">30%</div>
-						
-						</div>
-						
-						<div class="bar">
-							
-							<div class="title">JUL</div>
-							<div class="value">50%</div>
-						
-						</div>
-						
-						<div class="bar simple">
-							
-							<div class="title">AUG</div>
-							<div class="value">65%</div>
-						
-						</div>	
 						
 						
 						
@@ -336,6 +316,8 @@
 
 	<!-- start: JavaScript-->
 		<script src="js/lib/jquery-1.10.2.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/chart.js"></script>
 	<script src="js/lib/jquery-migrate-1.2.1.min.js"></script>	
 		<script src="js/lib/jquery-ui-1.10.3.custom.min.js"></script>	
 		<script src="js/lib/jquery.ui.touch-punch.js"></script>	
@@ -375,7 +357,7 @@
 		<script src="js/lib/charts.min.js"></script>	
 		<script src="js/lib/custom.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCLfYBcvYL3bBIvHqFJIVp22IZsXRcbUQ&sensor=false"></script>
-		<script src="js/common.js"></script>
+		
 		<script src="js/map.js"></script>
 	<!-- end: JavaScript-->
 	

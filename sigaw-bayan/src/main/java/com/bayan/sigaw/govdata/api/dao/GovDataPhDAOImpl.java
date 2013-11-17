@@ -224,6 +224,51 @@ public class GovDataPhDAOImpl implements GovDataPhDAO{
 		
 		return returnProjectDetails;
 	}
+
+
+	@Override
+	public List<ProjectDetail> getAllProjectsInRegion(String region) {
+		DefaultHttpClient client = new DefaultHttpClient();
+		ProjectDetails projectDetails = null;
+		List<ProjectDetail> returnProjectDetails = new ArrayList<ProjectDetail>();
+
+		try 
+		{
+
+			HttpGet getRequest = new HttpGet(OPENDATA_URL + "?app_id=" + APP_ID 
+					+ "&limit=" + 5 + "&region=" + region);
+
+			HttpResponse response = client.execute(getRequest);		
+
+			if (response.getStatusLine().getStatusCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : "
+						+ response.getStatusLine().getStatusCode());
+			}
+
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader((response.getEntity().getContent())));
+
+			StringBuffer responseBuffer = new StringBuffer(); 
+			String output = null;
+			while ((output = br.readLine()) != null) {
+				responseBuffer.append(output);
+			}
+
+			if(!StringUtils.isEmpty(responseBuffer.toString())) {
+				Gson gson = new GsonBuilder().create();
+				projectDetails = gson.fromJson(responseBuffer.toString(), ProjectDetails.class);
+				returnProjectDetails.addAll(projectDetails.getData());
+			} else {
+				throw new RuntimeException("No data retrieve!!!!");
+			}
+
+
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return returnProjectDetails;
+	}
 	
 	
 	

@@ -2,18 +2,13 @@ package com.bayan.sigaw.govdata.model;
 
 public class ProjectOverview {
 		
-	private String decription;
-	private String department_code;
-	private long amount;
-	private String saro_no;
-	private String region;
-	private String id;
-	public String getDecription() {
-		return decription;
-	}
-	public void setDecription(String decription) {
-		this.decription = decription;
-	}
+	protected String description;
+	protected String department_code;
+	protected long amount;
+	protected String saro_no;
+	protected String region;
+	protected String id;
+	
 	public String getDepartment_code() {
 		return department_code;
 	}
@@ -43,6 +38,12 @@ public class ProjectOverview {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}	
 	
 	

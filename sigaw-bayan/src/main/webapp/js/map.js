@@ -32,27 +32,6 @@ function plotRegion() {
 
 		$.each(data, function (index, value) {
 			
-			
-			//location = "Region " + value.region + ", Philippines";
-/*			
-				geocoder.geocode( { 'address': location}, function(results, status) {
-						if (status == google.maps.GeocoderStatus.OK) {
-							var lat = results[0].geometry.location.ob + (Math.random() * 0.2);
-							var lng = results[0].geometry.location.pb + (Math.random() * 0.1);
-							var latLng = new google.maps.LatLng(lat,lng);
-							var marker = new google.maps.Marker({
-								map: map,
-								position: latLng,
-								title: value.decription
-							});
-							console.log("Res: " + value.region + " lat:" + lat + " long" + lng);
-							bindDataInfo(marker, infoWindow, value);
-						} else {
-							//alert('Geocode was not successful for the following reason: ' + status);
-							console.log('Geocode was not successful for the following reason: ' + status);
-						}
-				});*/
-			
 			if (!uniqueRegions[this[param]]) {
 				uniqueRegions[this[param]] = [];	
 				uniqueRegions[this[param]].push(this);
@@ -68,6 +47,7 @@ function plotRegion() {
 						bindDataInfo(marker, infoWindow, value);
 					} else {
 						console.log('Geocode was not successful for the following reason: ' + status);
+						return false;
 					}
 				});
 			}
@@ -81,7 +61,11 @@ function bindDataInfo(marker, infoWindow, data){
 	var dataInfo = $('#data-info-container');
 
 	google.maps.event.addListener(marker, 'click', function() {
-		dataInfo.find('#regionNo').text(data.region);
+		dataInfo.find('.region').text(data.region);
+		dataInfo.find('.prog-desc').text(data.program_description);
+		dataInfo.find('.dept').text(data.department_code);
+		dataInfo.find('.amount').text(data.amount);
+		dataInfo.find('.saro-no').attr('href', 'projectdetails/' + data.saro_no + '/' + data.region);
         infoWindow.setContent(dataInfo.html());
         infoWindow.open(map, marker);
     });

@@ -4,8 +4,12 @@ html, body {color:#000;}
 
 .login-box #username, .login-box #password {color:#383e4b !important;}
 
-#map-canvas { height: 450px; }
+#map-canvas { height: 500px; }
 #data-info-container {display:none;}
+
 .data-info {background-color:#ccc; max-height: 200px;}
 
 .smallstat .title {color : #000 !important;}
+.data-info {background-color:#fff; font:bold 12px/14px arial, helvetica, sans-serif !important; height:200px; width:220px;}
+.data-info p span { font:normal 11px/14px arial, helvetica, sans-serif !important;}
+.data-info a { color:#15c;text-decoration:underline;}

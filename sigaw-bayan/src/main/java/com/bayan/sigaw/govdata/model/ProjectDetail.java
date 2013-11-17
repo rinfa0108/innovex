@@ -48,7 +48,7 @@ public class ProjectDetail extends ProjectOverview{
 	public ProjectOverview extractProjectOverview() {
 		ProjectOverview overview = new ProjectOverview();		
 		overview.setAmount(this.getAmount());
-		overview.setDecription(this.getDecription());
+		overview.setDescription(this.getDescription());
 		overview.setDepartment_code(this.getDepartment_code());
 		overview.setId(this.getId());
 		overview.setRegion(this.getRegion());

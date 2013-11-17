@@ -23,10 +23,7 @@ public class FacebookController {
 	private static final Logger logger = Logger.getLogger(FacebookController.class);
 	
 	@Inject
-	private ConnectionRepository connectionRepository;
-	
-	@Inject
-	private AccountsService accountsService;
+	private ConnectionRepository connectionRepository;	
 	
 	@RequestMapping(value="/facebook", method=RequestMethod.GET)
 	public String goToFacebookProfile(Model model) {

@@ -1,13 +1,11 @@
 package com.bayan.sigaw.sentiment.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 public class DocSentiment {
 	
 	private String type;
-	private Double score;
+	private Float score;
 	public String getType() {
 		return type;
 	}
@@ -16,11 +14,11 @@ public class DocSentiment {
 		this.type = type;
 	}
 
-	public Double getScore() {
+	public Float getScore() {
 		return score;
 	}
 
-	public void setScore(Double score) {
+	public void setScore(Float score) {
 		this.score = score;
 	}
 	

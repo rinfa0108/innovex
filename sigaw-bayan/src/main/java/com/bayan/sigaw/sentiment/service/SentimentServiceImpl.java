@@ -48,7 +48,7 @@ public class SentimentServiceImpl implements AlchemySentimentService{
 			
 		    sentimentResult = new Results();
 		    DocSentiment docSentiment = new DocSentiment(); 
-		    
+		    sentimentResult.setDocSentiment(docSentiment);
 		    sentimentResult.setLanguage(sentimentResponse.getLanguage());
 		    sentimentResult.setStatus(sentimentResponse.getStatus().toString());
 		    sentimentResult.setUrl(sentimentResponse.getURL());
@@ -67,7 +67,7 @@ public class SentimentServiceImpl implements AlchemySentimentService{
 		    while(iter.hasNext()) {
 		      entity = iter.next();		      
 		      System.out.println("Score: " + entity.getScore());
-		      docSentiment.setScore(entity.getScore());
+		      docSentiment.setScore(entity.getScore().floatValue());
 		      System.out.println("Type: " + entity.getType());
 		      docSentiment.setType(entity.getType().toString());
 		    }
